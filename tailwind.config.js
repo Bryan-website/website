@@ -7,6 +7,7 @@ module.exports = {
         gum_pink: "#FF808F",
         light_pink: "#FFCCD2",
         dark_pink: "#D3174A",
+        swamp_green: "#96A27B",
       },
       backgroundImage: (theme) => ({
         "home-image-mobile": "url('images/home_bg_mb.jpeg')",

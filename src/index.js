@@ -3,38 +3,46 @@ import "@fortawesome/fontawesome-free/js/fontawesome";
 
 import "./index.css";
 
-function close(icon, links) {
-  links.classList.remove("max-h-96");
-  links.classList.add("max-h-0");
-  icon.classList.remove("fa-minus-circle");
-  icon.classList.add("fa-plus-circle");
-}
+const menu = document.getElementsByClassName("menu");
+const icon = document.getElementById("menu_icon");
 
-function open(icon, links) {
-  links.classList.remove("max-h-0");
-  links.classList.add("max-h-96");
-  icon.classList.remove("fa-plus-circle");
-  icon.classList.add("fa-minus-circle");
-}
+console.log(icon.classList);
 
-for (element of document.getElementsByClassName("section")) {
-  element.addEventListener("click", (e) => {
-    const icon = e.currentTarget.getElementsByClassName("expand")[0];
-    const links = e.currentTarget.nextElementSibling;
+document.getElementById("menu_icon").onClick = function () {
+  console.log("hi");
+};
 
-    if (icon.classList.contains("fa-minus-circle")) {
-      close(icon, links);
-    } else if (icon.classList.contains("fa-plus-circle")) {
-      for (element of document.getElementsByClassName("section")) {
-        const icon = element.getElementsByClassName("expand")[0];
-        const links = element.nextElementSibling;
+document.getElementById("menu_icon").addEventListener("click", (e) => {
+  const div = e.currentTarget;
+  const icon = div.children[0];
+  const menu = document.getElementById("menu");
+  if (icon.classList.contains("fa-bars")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-times");
+    console.log(menu);
+    console.log(menu.classList);
+    menu.classList.remove("hidden");
+    menu.classList.add("flex");
+  } else {
+    icon.classList.add("fa-bars");
+    icon.classList.remove("fa-times");
+    menu.classList.add("hidden");
+    menu.classList.remove("flex");
+  }
+});
 
-        if (icon.classList.contains("fa-minus-circle")) {
-          close(icon, links);
-        }
-      }
-
-      open(icon, links);
-    }
-  });
-}
+// menu.addEventListener("click", (e) => {
+//   const menu = e.currentTarget;
+//   const icon = menu.children[0];
+//   if (icon.classList.contains("fa-bars")) {
+//     icon.classList.remove("fa-bars");
+//     icon.classList.add("fa-times");
+//     menu_links.classList.remove("hidden");
+//     menu_links.classList.add("flex");
+//   } else {
+//     icon.classList.remove("fa-times");
+//     icon.classList.add("fa-bars");
+//     menu_links.classList.add("hidden");
+//     menu_links.classList.remove("flex");
+//   }
+// });

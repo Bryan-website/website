@@ -6,31 +6,58 @@
     <title>Makka Studios</title>
   </head>
   <body>
-    <div
-      class="
-        h-28
-        flex flex-row
-        justify-between
-        px-8
-        lg:px-24
-        fixed
-        z-10
-        bg-white
-        w-full
-      "
-    >
-      <img class="w-44 self-center" src="images/logo.jpeg" />
-      <i class="fas fa-bars text-5xl self-center lg:hidden"></i>
-      <div class="lg:flex flex-row hidden">
-        <h1 class="hidden lg:block self-center mx-5 text-2xl font-light">
-          Games
-        </h1>
-        <h1 class="hidden lg:block self-center mx-5 text-2xl font-light">
-          Our mission
-        </h1>
-        <h1 class="hidden lg:block self-center mx-5 text-2xl font-light">
-          The team
-        </h1>
+    <div class="flex flex-col fixed z-10 bg-white w-full">
+      <div class="flex flex-row justify-between px-8 lg:px-24 h-28">
+        <a class="mt-6" href="#"
+          ><img class="w-44 self-center" src="images/logo.jpeg"
+        /></a>
+
+        <div id="menu_icon">
+          <i
+            class="
+              mt-6
+              menu_icon
+              fas
+              fa-bars
+              text-5xl
+              self-center
+              lg:hidden
+              align-middle
+            "
+          ></i>
+        </div>
+
+        <div class="lg:flex flex-row hidden">
+          <a
+            href="#games"
+            class="hidden lg:block self-center mx-5 text-2xl font-light"
+          >
+            Games
+          </a>
+          <a
+            href="#our_mission"
+            class="hidden lg:block self-center mx-5 text-2xl font-light"
+          >
+            Our mission
+          </a>
+          <a
+            href="#the_team"
+            class="hidden lg:block self-center mx-5 text-2xl font-light"
+          >
+            The team
+          </a>
+        </div>
+      </div>
+      <div id="menu" class="hidden lg:hidden flex-col">
+        <a href="#games" class="text-center mt-4 mb-5 text-2xl font-light"
+          >Games</a
+        >
+        <a href="#our_mission" class="text-center my-5 text-2xl font-light"
+          >Our mission</a
+        >
+        <a href="#the_team" class="text-center mt-5 mb-10 text-2xl font-light"
+          >The team</a
+        >
       </div>
     </div>
     <div
@@ -150,6 +177,7 @@
     </div>
     <div class="bg-gum_pink float-right w-full text-center">
       <h1
+        id="games"
         class="
           text-white
           uppercase
@@ -311,6 +339,7 @@
       "
     >
       <h1
+        id="our_mission"
         class="
           text-white
           uppercase
@@ -351,6 +380,25 @@
         <br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
+      </h1>
+    </div>
+    <div class="bg-swamp_green h-56 float-right w-full">
+      <h1
+        id="the_team"
+        class="
+          text-white
+          uppercase
+          text-6xl
+          font-extrabold
+          text-center
+          mx-auto
+          py-2
+          mt-16
+          lg:text-8xl
+        "
+      >
+        The <br class="sm:hidden" />
+        team
       </h1>
     </div>
 
