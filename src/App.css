@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navLink:hover {
+  color: lightgray;
+}
